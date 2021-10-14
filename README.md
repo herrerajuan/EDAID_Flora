@@ -4,10 +4,10 @@ Project for Open Data Standards and Integrations for Bioinformatics Degree (Mál
 
 ## Team Members
 
-- Paula Andújar (@Paulandujar)
-
-- Soledad del Castilo (@delcastillosoledad)
-
 - Irene Romero (@ireneeromero)
 
 - Juan Herrera (@herrerajuan)
+
+- Paula Andújar (@Paulandujar)
+
+- Soledad del Castilo (@delcastillosoledad)
