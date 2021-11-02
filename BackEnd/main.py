@@ -5,9 +5,10 @@ Created on Wed Oct 13 19:17:36 2021
 @author: USUARIO
 """
 from flask import Flask, render_template, redirect, request
-from pymongo import MongoClient, pymongo
+from pymongo import MongoClient
+import pymongo
 
-client = MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?ssl=true&ssl_cert_reqs=CERT_NONE")
 mongo_db = client.get_database('Flora')
 mongo_col = pymongo.collection.Collection(mongo_db, 'Flora')
 
@@ -15,6 +16,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def pagina_principal():
+    print("principal")
     return render_template("AplicacionFlora.html")
 
 @app.route('/flora')
@@ -27,6 +29,7 @@ def formulario():
     if request.method == 'GET':
         return render_template("formulario.html")
     elif request.method == 'POST':
+        print("post")
         OBJECTID = request.form['OBJECTID']
         MapCode = request.form['MapCode']
         MapClass = request.form['MapClass']
@@ -64,7 +67,7 @@ def formulario():
                    "CommunityLink" : CommunityLink, "Shape__Area" : Shape__Area,
                    "Shape__Length" : Shape__Length}
         mongo_col.insert_one(especie)
-        return redirect("/flora")
+        return redirect("/")
 
 if __name__ == '__main__':
     app.run(debug=True)
