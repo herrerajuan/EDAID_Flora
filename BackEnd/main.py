@@ -8,9 +8,9 @@ from flask import Flask, render_template, redirect, request
 from pymongo import MongoClient
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?ssl=true&ssl_cert_reqs=CERT_NONE")
+client = pymongo.MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 mongo_db = client.get_database("Flora")
-mongo_col = pymongo.collection.Collection(mongo_db, "Flora")
+mongo_col = pymongo.collection.Collection(mongo_db, "Data")
 
 app = Flask(__name__)
 
@@ -21,12 +21,12 @@ def pagina_principal():
 @app.route('/flora')
 def list_flora():
     data = mongo_col.find()
-    return render_template("flora.html", users = data, mostrar_enlace = True)
+    return render_template("Flora.html", users = data, mostrar_enlace = True)
 
 @app.route('/formulario', methods = ['GET', 'POST'])
 def formulario():
     if request.method == 'GET':
-        return render_template("formulario.html")
+        return render_template("Formulario.html")
     elif request.method == 'POST':
         num_register = request.form['num_register']
         date = request.form['date']
