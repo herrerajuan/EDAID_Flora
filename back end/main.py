@@ -5,9 +5,9 @@ Created on Wed Oct 13 19:17:36 2021
 @author: USUARIO
 """
 from flask import Flask, render_template, redirect, request
-from flask_pymongo import pymongo
+from pymongo import MongoClient, pymongo
 
-client = pymongo.MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?retryWrites=true&w=majority")
 mongo_db = client.get_database('Flora')
 mongo_col = pymongo.collection.Collection(mongo_db, 'Flora')
 
