@@ -1,10 +1,11 @@
 from random import randint, random
 from datetime import datetime
 from pymongo import MongoClient
+import random as rand
 
 try:
     conn = MongoClient(
-        "mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?retryWrites=true&w=majority"
+        "mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?ssl=true&ssl_cert_reqs=CERT_NONE"
     )
     print("Connected to MongoDB")
 except:
@@ -24,7 +25,7 @@ location = [
 ]
 
 UTM = [
-    "UF" + randint(1000, 3000)
+    "UF" + str(randint(1000, 3000))
 ]
 
 lithology = [
@@ -59,7 +60,7 @@ specie = [
 
 inicio = datetime(1900, 1, 1)
 fin = datetime(2021, 11, 1)
-date_random = inicio + (fin-inicio) * random.random()
+date_random = inicio + (fin-inicio) * rand.random()
 
 ITEMS_COUNT = 300
 
