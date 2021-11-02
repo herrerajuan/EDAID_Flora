@@ -8,15 +8,14 @@ from flask import Flask, render_template, redirect, request
 from pymongo import MongoClient
 import pymongo
 
-client = MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?ssl=true&ssl_cert_reqs=CERT_NONE")
-mongo_db = client.get_database('Flora')
-mongo_col = pymongo.collection.Collection(mongo_db, 'Flora')
+client = pymongo.MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/Flora?ssl=true&ssl_cert_reqs=CERT_NONE")
+mongo_db = client.get_database("Flora")
+mongo_col = pymongo.collection.Collection(mongo_db, "Flora")
 
 app = Flask(__name__)
 
 @app.route('/')
 def pagina_principal():
-    print("principal")
     return render_template("AplicacionFlora.html")
 
 @app.route('/flora')
@@ -29,43 +28,60 @@ def formulario():
     if request.method == 'GET':
         return render_template("formulario.html")
     elif request.method == 'POST':
-        print("post")
-        OBJECTID = request.form['OBJECTID']
-        MapCode = request.form['MapCode']
-        MapClass = request.form['MapClass']
-        MCVName = request.form['MCVName']
-        MCVLevel = request.form['MCVLevel']
-        HabAECOM = request.form['HabAECOM']
-        HabCode = request.form['HabCode']
-        Site = request.form['Site']
-        AcresGIS = request.form['AcresGIS']
-        Shape_Leng = request.form['Shape_Leng']
-        CalVegType = request.form['CalVegType']
-        CalVegCode = request.form['CalVegCode']
-        SCWHRType = request.form['SCWHRType']
-        CWHRCode = request.form['CWHRCode']
-        GlobalRank = request.form['GlobalRank']
-        StateRank = request.form['StateRank']
-        Sensitive = request.form['Sensitive']
-        CaCode = request.form['CaCode']
-        MCVAlliance = request.form['MCVAlliance']
-        MCVGroup = request.form['MCVGroup']
-        MCVMacrogroup = request.form['MCVMacrogroup']
-        CommunityLink = request.form['CommunityLink']
-        Shape__Area = request.form['Shape__Area']
-        Shape__Length = request.form['Shape__Length']
-        especie = {"OBJECTID" : OBJECTID, "MapCode": MapCode, "MapClass" : 
-                   MapClass, "MCVName" : MCVName, "MCVLevel" 
-                   : MCVLevel, "HabAECOM" : HabAECOM, "HabCode" : HabCode, 
-                   "Site" : Site, "AcresGIS" : AcresGIS, 
-                   "Shape_Leng" : Shape_Leng, "CalVegType" : CalVegType, 
-                   "CalVegCode" : CalVegCode, "SCWHRType" : SCWHRType, 
-                   "CWHRCode" : CWHRCode, "GlobalRank" : GlobalRank, 
-                   "StateRank" : StateRank, "Sensitive" : Sensitive, 
-                   "CaCode" : CaCode, "MCVAlliance" : MCVAlliance, 
-                   "MCVGroup" : MCVGroup, "MCVMacrogroup" : MCVMacrogroup, 
-                   "CommunityLink" : CommunityLink, "Shape__Area" : Shape__Area,
-                   "Shape__Length" : Shape__Length}
+        num_register = request.form['num_register']
+        date = request.form['date']
+        author = request.form['author']
+        location = request.form['location']
+        UTM = request.form['UTM']
+        lithology = request.form['lithology']
+        coverage = request.form['coverage']
+        altitude = request.form['altitude']
+        plot_slope = request.form['plot_slope']
+        altitude_veg = request.form['altitude_veg']
+        plot_area = request.form['plot_area']
+        plot_orientation  = request.form['plot_orientation']
+        community = request.form['community']
+        abies_pinsapo = request.form['abies_pinsapo']
+        pinus_halepensis = request.form['pinus_halepensis']
+        juniperus_plumosa = request.form['juniperus_plumosa']
+        juniperus_oxycedrus = request.form['juniperus_oxycedrus']
+        ceratonia_siliqua = request.form['ceratonia_siliqua']
+        chaualiop_limitis = request.form['chaualiop_limitis']
+        ranunculus_aqualitis = request.form['ranunculus_aqualitis']
+        acu_frentence = request.form['acu_frentence']
+        sorbus_aria = request.form['sorbus_aria']
+        digitalis_obscura = request.form['digitalis_obscura']
+        athamanta_vayredana = request.form['athamanta_vayredana']
+        centaurea_clementei = request.form['centaurea_clementei']
+        campanula_mollis = request.form['campanula_mollis']
+        silene_andryalifolia = request.form['silene_andryalifolia']
+        sedum_dasphyllum = request.form['sedum_dasphyllum']
+        chaenorrhinum_villosum = request.form['chaenorrhinum_villosum']
+        rhamnus_myrtifolius = request.form['rhamnus_myrtifolius']
+        teucrium_similatum = request.form['teucrium_similatum']
+        cephalaria_leucantha = request.form['cephalaria_leucantha']
+        helictotrichon_filifolium_arundanum = request.form['helictotrichon_filifolium_arundanum']
+        thrincia_sp = request.form['thrincia_sp']
+        sanguisorba_minor = request.form['sanguisorba_minor']
+        scabiosa_turolensis_grosii = request.form['scabiosa_turolensis_grosii']
+        especie = {"num_register" : num_register, "date": date, 
+                "author" : author, "location" : location, "UTM" : UTM, 
+                "lithology" : lithology, "coverage" : coverage, 
+                "altitude" : altitude, "plot_slope" : plot_slope, 
+                "altitude_veg" : altitude_veg, "plot_area" : plot_area, 
+                "plot_orientation" : plot_orientation, "community" : community, 
+                "abies_pinsapo" : abies_pinsapo, "pinus_halepensis" : pinus_halepensis, 
+                "juniperus_plumosa" : juniperus_plumosa, "juniperus_oxycedrus" : juniperus_oxycedrus, 
+                "ceratonia_siliqua" : ceratonia_siliqua, "chaualiop_limitis" : chaualiop_limitis,
+                "ranunculus_aqualitis" : ranunculus_aqualitis, "acu_frentence" : acu_frentence, 
+                "sorbus_aria" : sorbus_aria, "digitalis_obscura" : digitalis_obscura, 
+                "athamanta_vayredana" : athamanta_vayredana, "centaurea_clementei" : centaurea_clementei,
+                "campanula_mollis" : campanula_mollis, "silene_andryalifolia" : silene_andryalifolia, 
+                "sedum_dasphyllum" : sedum_dasphyllum, "chaenorrhinum_villosum" : chaenorrhinum_villosum, 
+                "rhamnus_myrtifolius" : rhamnus_myrtifolius, "teucrium_similatum" : teucrium_similatum,
+                "cephalaria_leucantha" : cephalaria_leucantha, "helictotrichon_filifolium_arundanum" : helictotrichon_filifolium_arundanum, 
+                "thrincia_sp" : thrincia_sp, "sanguisorba_minor" : sanguisorba_minor,
+                "scabiosa_turolensis_grosii" : scabiosa_turolensis_grosii}
         mongo_col.insert_one(especie)
         return redirect("/")
 
