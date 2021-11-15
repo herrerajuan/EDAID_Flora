@@ -55,7 +55,16 @@ community = [
 specie = [
     "-",
     "+",
-    randint(1, 10)
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
 ]
 
 def random_date(start, end):
@@ -69,7 +78,6 @@ for i in range(0,300):
     d1 = datetime.strptime('1/1/2000 1:30 PM', '%m/%d/%Y %I:%M %p')
     d2 = datetime.strptime('1/1/2021 4:50 AM', '%m/%d/%Y %I:%M %p')
     date_random.append(random_date(d1, d2))
-    print(date_random)
 
 ITEMS_COUNT = 300
 
