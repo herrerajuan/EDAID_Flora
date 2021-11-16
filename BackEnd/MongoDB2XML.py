@@ -16,7 +16,9 @@ flora = Element('Flora')
 comment = Comment('Data generated from MongoDB')
 flora.append(comment)
 
-client = pymongo.MongoClient("mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/myFirstDatabase?ssl=true&ssl_cert_reqs=CERT_NONE")
+client = pymongo.MongoClient(
+"mongodb+srv://soledad03:coronavirusbdb@cluster0.epzrv.mongodb.net/myFirstDatabase?ssl=true&ssl_cert_reqs=CERT_NONE"
+)
 db = client.Flora
 resultado = db.Flora.find()
 
@@ -99,7 +101,6 @@ for index, row in df.iterrows() :
     scabiosa_turolensis_grosii.text = str(row['scabiosa_turolensis_grosii'])
 
     
-
 print(tostring(flora))
 
 f = open("floradesdemongodb.xml", "w")
