@@ -21,16 +21,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#comunidadDe -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#comunidadDe">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Location"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Community"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#esEscrito -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#esEscrito">
@@ -140,6 +130,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#community -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#community"/>
+    
+
+
     <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#coverage -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#coverage"/>
@@ -194,9 +190,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#numRegistro -->
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#num_register -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#numRegistro"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#num_register"/>
     
 
 
@@ -295,12 +291,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Community -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Community"/>
-    
-
-
     <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Location -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Location"/>
@@ -321,24 +311,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Abeto_pinsapo -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Abeto_pinsapo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Community"/>
-        <nombreCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abeto pinsapo</nombreCientifico>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Athamantetum_vayredanae -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Athamantetum_vayredanae">
-        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Community"/>
-        <nombreCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Athamantetum vayredanae</nombreCientifico>
-    </owl:NamedIndividual>
     
 
 
@@ -382,10 +354,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#MA._Tolox">
         <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Location"/>
-        <comunidadDe rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Abeto_pinsapo"/>
-        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1010</altitude>
         <nombreLocalizacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA. Tolox</nombreLocalizacion>
-        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</plot_slope>
     </owl:NamedIndividual>
     
 
@@ -418,6 +387,7 @@
         <UTM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30SUF23469/61807</UTM>
         <abies_pinsapo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</abies_pinsapo>
         <acu_frentence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</acu_frentence>
+        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1100</altitude>
         <altitude_veg rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</altitude_veg>
         <athamanta_vayredana rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</athamanta_vayredana>
         <campanula_mollis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</campanula_mollis>
@@ -426,6 +396,7 @@
         <ceratonia_siliqua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</ceratonia_siliqua>
         <chaenorrhinum_villosum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</chaenorrhinum_villosum>
         <chaualiop_limitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></chaualiop_limitis>
+        <community rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</community>
         <coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</coverage>
         <digitalis_obscura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</digitalis_obscura>
         <fecha rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-5-18</fecha>
@@ -433,10 +404,11 @@
         <juniperus_oxycedrus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</juniperus_oxycedrus>
         <juniperus_plumosa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</juniperus_plumosa>
         <lithology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domias-Caliza</lithology>
-        <numRegistro rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</numRegistro>
+        <num_register rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</num_register>
         <pinus_halepensis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</pinus_halepensis>
         <plot_area rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</plot_area>
         <plot_orientation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NE</plot_orientation>
+        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</plot_slope>
         <ranunculus_aqualitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ranunculus_aqualitis>
         <rhamnus_myrtifolius rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</rhamnus_myrtifolius>
         <sanguisorba_minor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</sanguisorba_minor>
@@ -462,6 +434,7 @@
         <UTM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UF 2061</UTM>
         <abies_pinsapo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</abies_pinsapo>
         <acu_frentence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</acu_frentence>
+        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1680</altitude>
         <altitude_veg rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</altitude_veg>
         <athamanta_vayredana rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</athamanta_vayredana>
         <campanula_mollis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</campanula_mollis>
@@ -469,6 +442,7 @@
         <cephalaria_leucantha rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</cephalaria_leucantha>
         <chaenorrhinum_villosum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</chaenorrhinum_villosum>
         <chaualiop_limitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</chaualiop_limitis>
+        <community rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</community>
         <coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</coverage>
         <digitalis_obscura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</digitalis_obscura>
         <fecha rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-1-82</fecha>
@@ -476,10 +450,11 @@
         <juniperus_oxycedrus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_oxycedrus>
         <juniperus_plumosa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_plumosa>
         <lithology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caliza</lithology>
-        <numRegistro rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</numRegistro>
+        <num_register rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</num_register>
         <pinus_halepensis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</pinus_halepensis>
         <plot_area rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</plot_area>
         <plot_orientation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</plot_orientation>
+        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</plot_slope>
         <ranunculus_aqualitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</ranunculus_aqualitis>
         <rhamnus_myrtifolius rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</rhamnus_myrtifolius>
         <sanguisorba_minor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</sanguisorba_minor>
@@ -505,6 +480,7 @@
         <UTM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UF 1960</UTM>
         <abies_pinsapo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</abies_pinsapo>
         <acu_frentence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</acu_frentence>
+        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1100</altitude>
         <altitude_veg rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</altitude_veg>
         <athamanta_vayredana rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</athamanta_vayredana>
         <campanula_mollis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</campanula_mollis>
@@ -513,6 +489,7 @@
         <ceratonia_siliqua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</ceratonia_siliqua>
         <chaenorrhinum_villosum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</chaenorrhinum_villosum>
         <chaualiop_limitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</chaualiop_limitis>
+        <community rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</community>
         <coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</coverage>
         <digitalis_obscura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</digitalis_obscura>
         <fecha rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-1-82</fecha>
@@ -520,10 +497,11 @@
         <juniperus_oxycedrus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_oxycedrus>
         <juniperus_plumosa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_plumosa>
         <lithology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolomía</lithology>
-        <numRegistro rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</numRegistro>
+        <num_register rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</num_register>
         <pinus_halepensis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</pinus_halepensis>
         <plot_area rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</plot_area>
         <plot_orientation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</plot_orientation>
+        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</plot_slope>
         <ranunculus_aqualitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</ranunculus_aqualitis>
         <rhamnus_myrtifolius rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</rhamnus_myrtifolius>
         <sanguisorba_minor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</sanguisorba_minor>
@@ -549,6 +527,7 @@
         <UTM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UF 1960</UTM>
         <abies_pinsapo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</abies_pinsapo>
         <acu_frentence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</acu_frentence>
+        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1100</altitude>
         <altitude_veg rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</altitude_veg>
         <athamanta_vayredana rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</athamanta_vayredana>
         <campanula_mollis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</campanula_mollis>
@@ -557,6 +536,7 @@
         <ceratonia_siliqua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</ceratonia_siliqua>
         <chaenorrhinum_villosum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</chaenorrhinum_villosum>
         <chaualiop_limitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</chaualiop_limitis>
+        <community rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</community>
         <coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</coverage>
         <digitalis_obscura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</digitalis_obscura>
         <fecha rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-1-82</fecha>
@@ -564,10 +544,11 @@
         <juniperus_oxycedrus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_oxycedrus>
         <juniperus_plumosa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_plumosa>
         <lithology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mármol</lithology>
-        <numRegistro rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</numRegistro>
+        <num_register rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</num_register>
         <pinus_halepensis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</pinus_halepensis>
         <plot_area rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</plot_area>
         <plot_orientation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N</plot_orientation>
+        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</plot_slope>
         <ranunculus_aqualitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</ranunculus_aqualitis>
         <rhamnus_myrtifolius rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</rhamnus_myrtifolius>
         <sanguisorba_minor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</sanguisorba_minor>
@@ -593,6 +574,7 @@
         <UTM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UF 1960</UTM>
         <abies_pinsapo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</abies_pinsapo>
         <acu_frentence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</acu_frentence>
+        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1100</altitude>
         <altitude_veg rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</altitude_veg>
         <athamanta_vayredana rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</athamanta_vayredana>
         <campanula_mollis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</campanula_mollis>
@@ -601,6 +583,7 @@
         <ceratonia_siliqua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</ceratonia_siliqua>
         <chaenorrhinum_villosum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</chaenorrhinum_villosum>
         <chaualiop_limitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</chaualiop_limitis>
+        <community rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</community>
         <coverage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</coverage>
         <digitalis_obscura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</digitalis_obscura>
         <fecha rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-1-82</fecha>
@@ -608,10 +591,11 @@
         <juniperus_oxycedrus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_oxycedrus>
         <juniperus_plumosa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</juniperus_plumosa>
         <lithology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolomía</lithology>
-        <numRegistro rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">281</numRegistro>
+        <num_register rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">281</num_register>
         <pinus_halepensis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</pinus_halepensis>
         <plot_area rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</plot_area>
         <plot_orientation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</plot_orientation>
+        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</plot_slope>
         <ranunculus_aqualitis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</ranunculus_aqualitis>
         <rhamnus_myrtifolius rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</rhamnus_myrtifolius>
         <sanguisorba_minor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+</sanguisorba_minor>
@@ -629,10 +613,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#MA._PN._Sª_de_las_Nieves._Tolox._Carril_base_del_Torrecillas">
         <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Location"/>
-        <comunidadDe rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Athamantetum_vayredanae"/>
-        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1100</altitude>
         <nombreLocalizacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA. PN. Sª de las Nieves. Tolox. Carril base del Torrecillas</nombreLocalizacion>
-        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</plot_slope>
     </owl:NamedIndividual>
     
 
@@ -641,10 +622,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#MA._PN._Sª_de_las_Nieves._Tolox._Cerro_Alcazaba">
         <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Location"/>
-        <comunidadDe rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/untitled-ontology-7#Athamantetum_vayredanae"/>
-        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1680</altitude>
         <nombreLocalizacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA. PN. Sª de las Nieves. Tolox. Cerro Alcazaba</nombreLocalizacion>
-        <plot_slope rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</plot_slope>
     </owl:NamedIndividual>
 </rdf:RDF>
 
